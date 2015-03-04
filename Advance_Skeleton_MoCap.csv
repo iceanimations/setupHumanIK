@@ -1,0 +1,17 @@
+Character1_Hips,Root_M,Parent,RootX_M
+Character1_Spine,Spine1_M,orient,FKSpine1_M
+Character1_Spine1,Chest_M,orient,FKChest_M
+Character1_LeftShoulder,Scapula_L,orient,FKScapula_L
+Character1_LeftArm,Shoulder_L,orient,FKShoulder_L
+Character1_LeftForeArm,Elbow_L,orient,FKElbow_L
+Character1_LeftHand,Wrist_L,orient,FKWrist_L
+Character1_RightShoulder,Scapula_R,orient,FKScapula_R
+Character1_RightArm,Shoulder_R,orient,FKShoulder_R
+Character1_RightForeArm,Elbow_R,orient,FKElbow_R
+Character1_RightHand,Wrist_R,orient,FKWrist_R
+Character1_LeftUpLeg,Hip_L,orient,FKHip_L
+Character1_LeftLeg,Knee_L,orient,FKKnee_L
+Character1_LeftFoot,Ankle_L,orient,FKAnkle_L
+Character1_RightUpLeg,Hip_R,orient,FKHip_R
+Character1_RightLeg,Knee_R,orient,FKKnee_R
+Character1_RightFoot,Ankle_R,orient,FKAnkle_R
