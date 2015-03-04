@@ -34,9 +34,6 @@ def setup():
     try:
         data = getFileData(osp.join(rootPath, "Advance_Skeleton_MoCap.csv"))
         
-        # scale the joints down
-        for node in pc.ls(type='joint'):
-            node.radius.set(0.25)
         # get humanIK children
         zipedData = zip(*data)
         selectedNodes = pc.ls(sl=True)
@@ -51,6 +48,11 @@ def setup():
         # get rig controls
         rigControls = [x.firstParent() for x in pc.ls(sl=True, dag=True, type='nurbsCurve')
                         if qutil.getNiceName(x.firstParent().name()) in zipedData[3]]
+        
+        # scale the joints down
+        pc.select(selectedNodes[0])
+        for node in pc.ls(type='joint'):
+            node.radius.set(0.25)
         
         pc.select(selectedNodes)
         
