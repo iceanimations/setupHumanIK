@@ -4,6 +4,7 @@ Created on Mar 3, 2015
 @author: qurban.ali
 '''
 import pymel.core as pc
+import appUsageApp
 import csv
 import os
 osp = os.path
@@ -84,5 +85,7 @@ def setup():
             if qutil.getNiceName(ctrl.name()).lower() in ["FKIKLeg_L".lower(), "FKIKLeg_R".lower()]: 
                 ctrl.FKIKBlend.set(0)
         pc.select(selectedNodes)
+        
+        appUsageApp.updateDatabase('setupHIK')
     except Exception as ex:
         pc.confirmDialog(title=__title__, m=str(ex), button='Ok')
