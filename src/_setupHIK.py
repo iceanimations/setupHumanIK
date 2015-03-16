@@ -25,15 +25,10 @@ def getGoodNodes(node, names, split=False):
     for child in children:
         goodNodes.extend(getGoodNodes(child, names, split))
     return goodNodes
-    
-def getFileData(fileName):
-    with open(fileName, 'rb') as csvfile:
-        tuples = list(csv.reader(csvfile, delimiter=','))
-    return tuples
 
 def setup():
     try:
-        data = getFileData(osp.join(rootPath, "Advance_Skeleton_MoCap.csv"))
+        data = qutil.getCSVFileData(osp.join(rootPath, "Advance_Skeleton_MoCap.csv"))
         
         # get humanIK children
         zipedData = zip(*data)
